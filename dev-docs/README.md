@@ -45,7 +45,24 @@ Esta carpeta contiene documentación técnica y herramientas para el desarrollo 
 
 ### 🧪 Planificación y Desarrollo
 
-#### [`planning/mac-dev-environment.md`](./planning/mac-dev-environment.md) ⭐ DESARROLLO
+#### [`planning/mac-implementation-tasklist.md`](./planning/mac-implementation-tasklist.md) ⭐ EMPIEZA AQUÍ
+**Tasklist atómico: 41 tareas desde cero hasta primera evolución**
+
+- ✅ **A. Preparar herramientas** (4 tareas): Homebrew, Neovim, ripgrep, fd
+- ✅ **B. Estructura base** (6 tareas): Carpetas config, data, state, cache, registros
+- ✅ **C. Script lanzador** (7 tareas): n4n-mac.sh con variables XDG aisladas
+- ✅ **D. Config Neovim** (13 tareas): init.lua, lazy.nvim, LuaSnip, Tab navigation
+- ✅ **E. Snippets clínicos** (5 tareas): evo3000, hcp, sno en markdown.json
+- ✅ **F. Primer uso real** (5 tareas): Archivo de prueba con evolución completa
+- ✅ **G. Verificación final** (1 tarea): Validación de output
+
+**Cada tarea**: Una acción + verificación + commit sugerido. Listo para ejecutar.
+
+**Cuándo usar**: Cuando vayas a implementar el entorno paso a paso. Sigue cada tarea en orden.
+
+---
+
+#### [`planning/mac-dev-environment.md`](./planning/mac-dev-environment.md) 📖 CONTEXTO
 **Plan completo para montar laboratorio de desarrollo de snippets clínicos en macOS**
 
 - ✅ FASE 1: Setup de Neovim aislado (no interfiere con tu config personal)
@@ -60,9 +77,9 @@ Esta carpeta contiene documentación técnica y herramientas para el desarrollo 
 - ✅ Roadmap de próximos pasos (variantes de evolución, lenguaje de comandos)
 - ✅ Troubleshooting del entorno de desarrollo
 
-**Cuándo usar**: Cuando quieras desarrollar y probar nuevos snippets clínicos antes de llevarlos a producción (Windows en hospital). Mac = laboratorio, Windows = producción.
+**Cuándo usar**: Para entender el plan completo y la filosofía antes de implementar. Lee esto primero, luego usa el tasklist.
 
-**Filosofía**: Diseñar snippets que estructuren el pensamiento clínico sin sacrificar velocidad. Comandos cortos (3 letras) que se expanden en registro estructurado.
+**Filosofía**: Diseñar snippets que estructuren el pensamiento clínico sin sacrificar velocidad. Comandos cortos (3 letras) que se expanden en registro estructurado. Mac = laboratorio, Windows = producción.
 
 ---
 
@@ -206,7 +223,9 @@ dev-docs/
 ├── workflows/                         # Flujos de trabajo clínicos
 │   └── upc-daily-workflow.md          # Flujo diario UPC
 └── planning/                          # Planificación y desarrollo
-    └── mac-dev-environment.md         # Setup laboratorio Mac
+    ├── README.md                      # Índice de planificación
+    ├── mac-implementation-tasklist.md # Tasklist atómico (41 tareas)
+    └── mac-dev-environment.md         # Plan completo (3 fases)
 ```
 
 ---

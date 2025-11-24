@@ -43,6 +43,29 @@ Esta carpeta contiene documentación técnica y herramientas para el desarrollo 
 
 ---
 
+### 🧪 Planificación y Desarrollo
+
+#### [`planning/mac-dev-environment.md`](./planning/mac-dev-environment.md) ⭐ DESARROLLO
+**Plan completo para montar laboratorio de desarrollo de snippets clínicos en macOS**
+
+- ✅ FASE 1: Setup de Neovim aislado (no interfiere con tu config personal)
+- ✅ FASE 2: Configuración mínima con LuaSnip para snippets VSCode-style
+- ✅ FASE 3: Diseño de snippets clínicos avanzados
+  - **evo3000**: Evolución por sistemas + examen físico segmentado
+  - **hcp**: Comando hemodinámico (Hemodinamia/Cambio/Presión)
+  - **sno**: Comando sistema/núcleo/objetivo para frases rápidas
+- ✅ Flujo de trabajo completo de desarrollo
+- ✅ Validación con casos de prueba (2-3 evoluciones reales)
+- ✅ Criterios de éxito antes de ampliar
+- ✅ Roadmap de próximos pasos (variantes de evolución, lenguaje de comandos)
+- ✅ Troubleshooting del entorno de desarrollo
+
+**Cuándo usar**: Cuando quieras desarrollar y probar nuevos snippets clínicos antes de llevarlos a producción (Windows en hospital). Mac = laboratorio, Windows = producción.
+
+**Filosofía**: Diseñar snippets que estructuren el pensamiento clínico sin sacrificar velocidad. Comandos cortos (3 letras) que se expanden en registro estructurado.
+
+---
+
 ### 🔓 Separación del Repositorio Original
 
 #### [`QUICK-START-SEPARATION.md`](./QUICK-START-SEPARATION.md) ⭐ EMPIEZA AQUÍ
@@ -180,8 +203,10 @@ dev-docs/
 ├── migrate-to-new-repo.ps1            # Script migración Windows
 ├── setup-push-safety.sh               # Script seguridad Linux/macOS
 ├── setup-push-safety.ps1              # Script seguridad Windows
-└── workflows/                         # Flujos de trabajo clínicos
-    └── upc-daily-workflow.md          # Flujo diario UPC
+├── workflows/                         # Flujos de trabajo clínicos
+│   └── upc-daily-workflow.md          # Flujo diario UPC
+└── planning/                          # Planificación y desarrollo
+    └── mac-dev-environment.md         # Setup laboratorio Mac
 ```
 
 ---

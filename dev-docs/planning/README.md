@@ -23,8 +23,43 @@ Esta carpeta contiene la planificación completa para el desarrollo y validació
 
 ---
 
-### [`mac-dev-environment.md`](./mac-dev-environment.md) - Plan General (3 Fases)
+### [`telescope-architecture.md`](./telescope-architecture.md) 🔭 NUEVA DIRECCIÓN
+**Arquitectura Telescope + Snippets de Normalidad**
+
+**Filosofía**: Separar normalidad (snippets cortos) de patología (menús Telescope)
+
+**Contenido**:
+- **Parte A**: Integración de Telescope como menú por sistema
+  - Setup de Telescope vía lazy.nvim
+  - Módulo `telescope_systems.lua` con base de datos de plantillas
+  - Keymaps por sistema (`<leader>hh`, `<leader>nn`, etc.)
+- **Parte B**: 8 snippets de normalidad (3 letras cada uno)
+  - `nbo` - Neuro basal OK
+  - `hst` - Hemo estable
+  - `rst` - Resp estable
+  - `ist` - Inf estable
+  - `mst` - Meta estable
+  - `elm` - Eliminación OK
+  - `dst` - Dolor estable
+  - `ost` - Onco estable
+- Flujo de uso real con casos de ejemplo
+- Roadmap de expansión (Fases 1-5)
+- Checklist de implementación y validación
+
+**Ventajas**:
+- ✅ Memorización mínima (8 códigos vs. 200+)
+- ✅ Escalable (agregar plantillas sin nuevos códigos)
+- ✅ Descubrible (menú muestra opciones)
+- ✅ Velocidad mantenida para normalidad
+
+**Cuándo leer**: Después de elegir tu alternativa de setup. Este es el diseño actual de snippets y menús N4N.
+
+---
+
+### [`mac-dev-environment.md`](./mac-dev-environment.md) - Plan General (3 Fases) 📖 CONTEXTO
 **Roadmap completo del entorno de desarrollo en macOS (desde cero)**
+
+**Nota**: Este documento contiene el plan original con `evo3000` y comandos de 3 letras. La nueva dirección está en `telescope-architecture.md`.
 
 - **FASE 1**: Setup de Neovim aislado
 - **FASE 2**: Configuración mínima con LuaSnip

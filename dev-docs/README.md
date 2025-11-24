@@ -63,6 +63,33 @@ Esta carpeta contiene documentación técnica y herramientas para el desarrollo 
 
 ---
 
+#### [`planning/telescope-architecture.md`](./planning/telescope-architecture.md) 🔭 NUEVA DIRECCIÓN
+**Arquitectura Telescope + Snippets de Normalidad**
+
+- ✅ **Filosofía**: Separar normalidad (snippets cortos) de patología (menús Telescope)
+- ✅ **Parte A**: Integración de Telescope como menú por sistema
+  - Setup de Telescope vía lazy.nvim
+  - Módulo `telescope_systems.lua` con base de datos de plantillas
+  - Keymaps por sistema (`<leader>hh`, `<leader>nn`, `<leader>rr`, etc.)
+- ✅ **Parte B**: 8 snippets de normalidad (3 letras)
+  - `nbo` - Neuro basal OK | `hst` - Hemo estable | `rst` - Resp estable
+  - `ist` - Inf estable | `mst` - Meta estable | `elm` - Eliminación OK
+  - `dst` - Dolor estable | `ost` - Onco estable
+- ✅ Flujo de uso real: casos de normalidad, patología y situaciones únicas
+- ✅ Roadmap de expansión en 5 fases (setup → plantillas patológicas → multi-sistema)
+- ✅ Checklist de implementación y validación con casos reales
+- ✅ Comparación con diseño original (evo3000 vs. menús)
+
+**Ventajas del nuevo diseño**:
+- Memorización mínima: 8 códigos vs. 200+ del diseño anterior
+- Escalable: agregar plantillas sin memorizar nuevos códigos
+- Descubrible: menú visual muestra todas las opciones
+- Velocidad mantenida: snippets directos para normalidad
+
+**Cuándo usar**: Después de elegir tu alternativa de setup. **Este es el diseño actual** de snippets y menús N4N. El diseño con `evo3000` quedó como contexto histórico.
+
+---
+
 #### [`planning/mac-implementation-tasklist.md`](./planning/mac-implementation-tasklist.md) ⭐ SETUP DESDE CERO
 **Tasklist atómico: 41 tareas desde cero hasta primera evolución**
 
@@ -243,6 +270,7 @@ dev-docs/
 └── planning/                          # Planificación y desarrollo
     ├── README.md                      # Índice de planificación
     ├── alternatives-existing-neovim.md # Alternativas si ya tienes Neovim
+    ├── telescope-architecture.md      # Arquitectura Telescope + snippets normalidad
     ├── mac-implementation-tasklist.md # Tasklist atómico (41 tareas)
     └── mac-dev-environment.md         # Plan completo (3 fases)
 ```
@@ -510,6 +538,13 @@ Si encuentras errores o quieres mejorar la documentación:
 ## 📝 Registro de Cambios
 
 ### 2025-11-24
+- ✅ **NUEVA DIRECCIÓN**: Arquitectura Telescope + snippets de normalidad
+  - Filosofía: separar normalidad (snippets cortos) de patología (menús)
+  - Integración completa de Telescope como menú por sistema
+  - 8 snippets de normalidad (3 letras): nbo, hst, rst, ist, mst, elm, dst, ost
+  - Keymaps por sistema: `<leader>hh`, `<leader>nn`, `<leader>rr`, etc.
+  - Roadmap de expansión en 5 fases
+  - Comparación con diseño original (evo3000)
 - ✅ Agregado análisis de alternativas para usuarios con Neovim existente
 - ✅ Documentadas 3 alternativas: agregar a config actual, NVIM_APPNAME, o desde cero
 - ✅ Actualizado README con flujo de decisión para usuarios con GentlemanNvim

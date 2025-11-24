@@ -51,6 +51,24 @@ Esta carpeta contiene documentación técnica y herramientas para el desarrollo 
 
 ---
 
+### 🛡️ Seguridad de Push
+
+#### [`PUSH-SAFETY-GUIDE.md`](./PUSH-SAFETY-GUIDE.md) ⭐ IMPORTANTE
+**Guía de seguridad para asegurar que todos los push van a TU repositorio**
+
+- ✅ Verificación de configuración actual
+- ✅ Detección de relación de fork en GitHub
+- ✅ Workflows de push seguro a main
+- ✅ Pre-push hooks y git aliases
+- ✅ Scripts de verificación visual
+- ✅ Medidas de seguridad adicionales
+- ✅ Quick reference card
+- ✅ Señales de alerta y procedimientos de emergencia
+
+**Cuándo usar**: Siempre, antes de hacer push importante. Esencial para tranquilidad mental.
+
+---
+
 ### 🤖 Scripts de Automatización
 
 #### [`migrate-to-new-repo.sh`](./migrate-to-new-repo.sh)
@@ -91,16 +109,57 @@ Esta carpeta contiene documentación técnica y herramientas para el desarrollo 
 
 ---
 
+#### [`setup-push-safety.sh`](./setup-push-safety.sh)
+**Script de configuración de seguridad para Linux/macOS**
+
+```bash
+# Uso
+./dev-docs/setup-push-safety.sh
+```
+
+**Características**:
+- ✅ Instala pre-push hook bloqueando repos no deseados
+- ✅ Configura git aliases (safe-push, verify-remote)
+- ✅ Crea script safe-push.sh con verificación visual
+- ✅ Valida configuración actual de remotes
+- ✅ Elimina upstream si existe
+- ✅ Wizard interactivo con confirmaciones
+
+**Cuándo usar**: Una vez después de clonar el repo para proteger contra push accidentales.
+
+---
+
+#### [`setup-push-safety.ps1`](./setup-push-safety.ps1)
+**Script de configuración de seguridad para Windows (PowerShell)**
+
+```powershell
+# Uso
+.\dev-docs\setup-push-safety.ps1
+```
+
+**Características**:
+- ✅ Mismas funciones que la versión de Linux/macOS
+- ✅ Pre-push hook para Git Bash en Windows
+- ✅ Scripts de PowerShell nativos
+- ✅ Integración con Git for Windows
+
+**Cuándo usar**: Una vez después de clonar el repo en Windows para proteger contra push accidentales.
+
+---
+
 ## 🗂️ Estructura de Archivos
 
 ```
 dev-docs/
-├── README.md                          # Este archivo
+├── README.md                          # Este archivo - índice de documentación
 ├── nvim-installation-guide.md         # Instalación completa de Neovim
 ├── QUICK-START-SEPARATION.md          # Inicio rápido: separar fork
 ├── separate-fork-guide.md             # Guía exhaustiva de separación
-├── migrate-to-new-repo.sh             # Script Linux/macOS
-└── migrate-to-new-repo.ps1            # Script Windows PowerShell
+├── PUSH-SAFETY-GUIDE.md              # Guía de seguridad de push
+├── migrate-to-new-repo.sh             # Script migración Linux/macOS
+├── migrate-to-new-repo.ps1            # Script migración Windows
+├── setup-push-safety.sh               # Script seguridad Linux/macOS
+└── setup-push-safety.ps1              # Script seguridad Windows
 ```
 
 ---
@@ -162,7 +221,32 @@ git push -u origin --tags
 
 ---
 
-### Caso 4: Contactar a GitHub Support
+### Caso 4: Configurar Seguridad de Push
+
+**Objetivo**: Protegerse contra push accidentales al repo original.
+
+```bash
+# 1. Lee la guía de seguridad
+cat dev-docs/PUSH-SAFETY-GUIDE.md
+
+# 2. Ejecuta el script de configuración según tu OS:
+
+# Linux/macOS:
+./dev-docs/setup-push-safety.sh
+
+# Windows (PowerShell):
+.\dev-docs\setup-push-safety.ps1
+
+# 3. Verifica la configuración
+git verify-remote
+
+# 4. Usa push seguro cuando sea necesario
+git safe-push origin main
+```
+
+---
+
+### Caso 5: Contactar a GitHub Support
 
 **Objetivo**: Mantener el mismo nombre de repo pero eliminar "forked from".
 

@@ -45,7 +45,25 @@ Esta carpeta contiene documentación técnica y herramientas para el desarrollo 
 
 ### 🧪 Planificación y Desarrollo
 
-#### [`planning/mac-implementation-tasklist.md`](./planning/mac-implementation-tasklist.md) ⭐ EMPIEZA AQUÍ
+#### [`planning/alternatives-existing-neovim.md`](./planning/alternatives-existing-neovim.md) ⚡ LEER PRIMERO
+**¿Ya tienes Neovim configurado? Elige tu camino**
+
+- ✅ Análisis de tres alternativas con diferentes niveles de complejidad
+- ✅ **Alternativa A**: Agregar snippets a config existente (5 min) - Recomendado para empezar YA
+- ✅ **Alternativa B**: Config paralela con NVIM_APPNAME (30-45 min) - Aislamiento completo
+- ✅ **Alternativa C**: Entorno aislado total (2-3 horas) - Máximo control
+- ✅ Comparación detallada: tiempo, complejidad, aislamiento, espacio en disco
+- ✅ Setup paso a paso para cada alternativa
+- ✅ Launchers y scripts de acceso rápido
+- ✅ Recomendaciones por caso de uso
+
+**Para quién**: Si ya tienes GentlemanNvim (o cualquier config de Neovim) funcionando en tu Mac.
+
+**Cuándo usar**: ANTES de decidir si seguir el plan completo desde cero o aprovechar tu config actual. Este documento te ahorra tiempo si ya tienes Neovim.
+
+---
+
+#### [`planning/mac-implementation-tasklist.md`](./planning/mac-implementation-tasklist.md) ⭐ SETUP DESDE CERO
 **Tasklist atómico: 41 tareas desde cero hasta primera evolución**
 
 - ✅ **A. Preparar herramientas** (4 tareas): Homebrew, Neovim, ripgrep, fd
@@ -224,6 +242,7 @@ dev-docs/
 │   └── upc-daily-workflow.md          # Flujo diario UPC
 └── planning/                          # Planificación y desarrollo
     ├── README.md                      # Índice de planificación
+    ├── alternatives-existing-neovim.md # Alternativas si ya tienes Neovim
     ├── mac-implementation-tasklist.md # Tasklist atómico (41 tareas)
     └── mac-dev-environment.md         # Plan completo (3 fases)
 ```
@@ -376,6 +395,42 @@ git remote remove upstream  # Si existe
 
 ---
 
+### Caso 6: Ya Tengo Neovim - Setup Rápido ⚡
+
+**Objetivo**: Aprovechar tu config existente de Neovim (GentlemanNvim u otra) sin empezar desde cero.
+
+```bash
+# 1. Lee el análisis de alternativas
+cat dev-docs/planning/alternatives-existing-neovim.md
+
+# 2. Elige tu camino:
+
+# Opción A - SÚPER RÁPIDO (5 minutos):
+# Agregar snippets a tu config actual
+mkdir -p ~/.config/nvim/snippets
+# Copiar snippets clínicos
+# Crear launcher ~/n4n-start.sh
+# ¡Listo!
+
+# Opción B - AISLAMIENTO (30-45 minutos):
+# Config paralela independiente
+mkdir -p ~/.config/nvim-n4n
+# init.lua mínimo con LuaSnip
+# Launcher con NVIM_APPNAME
+alias n4n="NVIM_APPNAME=nvim-n4n nvim"
+
+# Opción C - DESDE CERO (2-3 horas):
+# Sigue el tasklist atómico completo
+cat dev-docs/planning/mac-implementation-tasklist.md
+```
+
+**Recursos clave**:
+- Alternativas: `planning/alternatives-existing-neovim.md`
+- Comparación: Tabla con tiempo/complejidad/aislamiento
+- Setup detallado: Cada alternativa con comandos exactos
+
+---
+
 ## 🔍 FAQ (Preguntas Frecuentes)
 
 ### ¿Cuál es la diferencia entre los archivos de separación?
@@ -454,11 +509,21 @@ Si encuentras errores o quieres mejorar la documentación:
 
 ## 📝 Registro de Cambios
 
+### 2025-11-24
+- ✅ Agregado análisis de alternativas para usuarios con Neovim existente
+- ✅ Documentadas 3 alternativas: agregar a config actual, NVIM_APPNAME, o desde cero
+- ✅ Actualizado README con flujo de decisión para usuarios con GentlemanNvim
+- ✅ Agregado workflow "Caso 6: Ya Tengo Neovim - Setup Rápido"
+
 ### 2025-01-24
 - ✅ Creada carpeta `dev-docs/`
 - ✅ Agregada guía de instalación completa de Neovim
+- ✅ Agregado flujo de trabajo diario para UPC
+- ✅ Agregado plan de desarrollo macOS (3 fases)
+- ✅ Agregado tasklist atómico (41 tareas)
 - ✅ Agregada guía de separación de fork (exhaustiva)
 - ✅ Agregado inicio rápido de separación
+- ✅ Agregada guía de seguridad de push
 - ✅ Agregados scripts automatizados (Linux/Mac y Windows)
 - ✅ Agregado este README
 
@@ -474,5 +539,5 @@ Para preguntas específicas sobre el proyecto, abre un issue en el repositorio.
 
 ---
 
-**Última actualización**: 2025-01-24
+**Última actualización**: 2025-11-24
 **Mantenido por**: @fegome90-cmd

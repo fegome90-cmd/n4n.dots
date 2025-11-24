@@ -23,6 +23,26 @@ Esta carpeta contiene documentación técnica y herramientas para el desarrollo 
 
 ---
 
+### 🏥 Flujos de Trabajo Clínicos
+
+#### [`workflows/upc-daily-workflow.md`](./workflows/upc-daily-workflow.md) ⭐ ESENCIAL
+**Flujo de trabajo completo para UPC (Unidad de Pacientes Críticos)**
+
+- ✅ Setup inicial de carpetas y estructura
+- ✅ Flujo paso a paso desde inicio hasta cierre de turno
+- ✅ Uso de snippets en contexto real
+- ✅ Entradas rápidas durante el turno (signos vitales, medicamentos, eventos)
+- ✅ Manejo de incidentes y eventos adversos
+- ✅ Búsqueda de información durante el turno
+- ✅ Procedimientos de cierre y relevo
+- ✅ Ejemplo completo de archivo de turno
+- ✅ Troubleshooting y buenas prácticas
+- ✅ Checklist de dominio del flujo
+
+**Cuándo usar**: Antes de tu primer turno con N4N y como referencia continua. Este es el documento que convierte la herramienta en un flujo de trabajo real.
+
+---
+
 ### 🔓 Separación del Repositorio Original
 
 #### [`QUICK-START-SEPARATION.md`](./QUICK-START-SEPARATION.md) ⭐ EMPIEZA AQUÍ
@@ -159,12 +179,60 @@ dev-docs/
 ├── migrate-to-new-repo.sh             # Script migración Linux/macOS
 ├── migrate-to-new-repo.ps1            # Script migración Windows
 ├── setup-push-safety.sh               # Script seguridad Linux/macOS
-└── setup-push-safety.ps1              # Script seguridad Windows
+├── setup-push-safety.ps1              # Script seguridad Windows
+└── workflows/                         # Flujos de trabajo clínicos
+    └── upc-daily-workflow.md          # Flujo diario UPC
 ```
 
 ---
 
 ## 🎯 Flujos de Trabajo Comunes
+
+### Caso 0: Primer Turno con N4N en UPC ⭐
+
+**Objetivo**: Usar N4N en tu primer turno en la Unidad de Pacientes Críticos.
+
+```bash
+# 1. Lee el flujo de trabajo completo
+cat dev-docs/workflows/upc-daily-workflow.md
+
+# O salta directo a la sección que necesitas:
+# - Sección 1: Preparar el entorno (primera vez)
+# - Sección 2: Flujo completo de un turno
+# - Sección 3: Durante el turno (entradas rápidas)
+# - Sección 4: Búsqueda durante el turno
+# - Sección 5: Cierre de turno
+# - Sección 8: Ejemplo completo de archivo de turno
+
+# 2. Crea la carpeta de registros (primera vez)
+mkdir -p C:\Users\TuUsuario\N4N\registros\UPC\2025
+
+# 3. Al inicio del turno:
+# - Abre N4N (doble click en n4n-portable.cmd)
+# - :e UPC-2025-11-24-Noche.md
+# - i → turno-diario<Tab>
+# - Llena secciones por paciente
+# - regenferm<Tab> para cada paciente
+
+# 4. Durante el turno usa snippets:
+# - sv<Tab> → signos vitales
+# - med<Tab> → medicamentos
+# - evol<Tab> → nota de evolución
+# - incidente<Tab> → evento adverso
+
+# 5. Al cierre:
+# - Marca pendientes [x]
+# - Resumen por paciente
+# - Observaciones generales
+# - :wq
+```
+
+**Recursos clave**:
+- Flujo completo: `workflows/upc-daily-workflow.md`
+- Snippets: `nvim-installation-guide.md` (sección snippets)
+- Atajos de teclado: Sección 7 del workflow
+
+---
 
 ### Caso 1: Nueva Instalación Completa
 

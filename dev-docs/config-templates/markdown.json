@@ -1,0 +1,153 @@
+{
+  "Evolucion N4N 3000 - Estructura": {
+    "prefix": "evo",
+    "body": [
+      "# EVOLUCIÓN STANDARD - N4N",
+      "",
+      "Recibo paciente conforme, se programan alarmas de monitor, ventilador y TRRC según corresponda.",
+      "Se realiza visita de enfermería junto a TENS, se verifica seguridad ambiental (cama frenada, barandas en alto, timbre al alcance) y se revisan accesos, dispositivos y tratamientos vigentes.",
+      "",
+      "## NEUROLÓGICO",
+      "",
+      "## HEMODINÁMICO",
+      "",
+      "## RESPIRATORIO",
+      "",
+      "## INFECCIOSO",
+      "",
+      "## METABÓLICO / NUTRICIONAL",
+      "",
+      "## ELIMINACIÓN",
+      "",
+      "## DOLOR Y CONFORT",
+      "",
+      "## ONCOLÓGICO / TERAPIAS ESPECIALES",
+      "",
+      "## EXAMEN FÍSICO SEGMENTADO",
+      "",
+      "## PENDIENTES / PLAN",
+      ""
+    ],
+    "description": "Estructura de evolución estándar N4N (sistemas + EF segmentado + pendientes)"
+  },
+
+  "NEURO - Basal normal (PDF 3000)": {
+    "prefix": "nbo",
+    "body": [
+      "**Neuro:** Paciente vigil, tranquilo, cooperador, responde a estímulos simples, orientado en tiempo y espacio.",
+      "Apertura ocular normal, pupilas isocóricas e isoreactivas. Movilidad conservada en las cuatro extremidades, sin déficit motor grosero aparente."
+    ],
+    "description": "Estado neurológico basal normal según evolución estándar"
+  },
+
+  "HEMO - Hemodinamia normal estable (PDF 3000)": {
+    "prefix": "hst",
+    "body": [
+      "**Hemodinamia:** Hemodinámicamente estable, PAM sobre ${1:65} mmHg sin uso de DVA.",
+      "Ritmo sinusal y frecuencia cardiaca dentro de rango (${2:ej. 70-90} lpm).",
+      "Al tacto se encuentra tibio y seco, bien perfundido, llene capilar <3 segundos, pulsos periféricos presentes y simétricos.",
+      "Piel y mucosas hidratadas y rosadas."
+    ],
+    "description": "Hemodinamia normal y buena perfusión periférica"
+  },
+
+  "RESP - Respiratorio dentro de metas (PDF 3000)": {
+    "prefix": "rst",
+    "body": [
+      "**Respiratorio:** Ventila espontáneo, Fio2 ambiental (${1:21%}), sin uso de musculatura accesoria, eupneico.",
+      "Saturación de oxígeno sobre ${2:93}% según monitor.",
+      "A la auscultación, murmullo pulmonar presente y simétrico, sin ruidos agregados relevantes (SRA)."
+    ],
+    "description": "Ventilación y oxigenación en parámetros normales"
+  },
+
+  "INF - Sin foco infeccioso aparente (PDF 3000)": {
+    "prefix": "ist",
+    "body": [
+      "**Infeccioso:** Afebril, con terapia antibiótica ${1:profiláctica/empírica} ajustada según antibiograma.",
+      "Antibiótico 1 en día ${2:X/Y}, antibiótico 2 en día ${3:X/Y}, antibiótico 3 en día ${4:X/Y} (según esquema vigente).",
+      "Cultivos pendientes del día ${5:DD/MM/AA} sin resultados críticos informados en este turno.",
+      "No requiere aislamiento de contacto/gotitas/protector/respiratorio/mixto."
+    ],
+    "description": "Situación infecciosa estable, afebril, en tratamiento según esquema"
+  },
+
+  "META - Metabolico y nutricional compensado (PDF 3000)": {
+    "prefix": "mst",
+    "body": [
+      "**Metabólico/Nutricional:** Euglicémico, glicemias dentro de rango meta definido por equipo tratante.",
+      "Régimen bien tolerado por boca; en caso de soporte enteral, SNE con fórmula ${1:Survimed/Glucerna/otra} a ${2:XX} cc/h según indicación.",
+      "Si corresponde, NPT a ${3:XX} cc/h con receta vigente por ${4:X} días.",
+      "No refiere náuseas ni vómitos durante el turno."
+    ],
+    "description": "Metabolismo y soporte nutricional dentro de metas"
+  },
+
+  "ELIM - Eliminacion conservada (PDF 3000)": {
+    "prefix": "elm",
+    "body": [
+      "**Eliminación:** Diuresis dentro de parámetros normales para peso y horario; orina de aspecto claro/amarillo claro.",
+      "Deposiciones normales, RHA presentes, elimina gases por boca y ano.",
+      "En caso de catéter urinario, este se mantiene permeable, fijado, sin signos de infección en el meato ni en el trayecto visible."
+    ],
+    "description": "Eliminación urinaria e intestinal conservada, sin signos de compromiso"
+  },
+
+  "DOLOR - Dolor controlado y confort adecuado (PDF 3000)": {
+    "prefix": "dst",
+    "body": [
+      "**Dolor y confort:** Dolor controlado con esquema analgésico vigente.",
+      "Actualmente con BIC de analgesia de ${1:fármaco} a ${2:XX} cc/h, con ${3:bajo/alto} uso de PCA según registro.",
+      "Paciente se mantiene en posición cómoda, sin signos de dolor intenso durante la evaluación.",
+      "Se refuerza educación sobre uso de PCA si corresponde."
+    ],
+    "description": "Dolor adecuadamente manejado y confort conservado"
+  },
+
+  "ONCO - Situacion oncologica estable": {
+    "prefix": "ost",
+    "body": [
+      "**Oncológico/Terapias especiales:** Paciente en contexto de ${1:quimioterapia/radioterapia/postoperatorio oncológico/otro} sin eventos agudos en este turno.",
+      "Signos vitales dentro de rangos esperados para su condición, sin sangrado activo ni dolor oncológico descompensado.",
+      "Dispositivos oncológicos (port-a-cath, drenajes, sondas) en buen estado, sin signos de infección ni disfunción evidente."
+    ],
+    "description": "Estado oncológico sin complicaciones agudas en el turno"
+  },
+
+  "EF - Examen fisico segmentado normal (PDF 3000)": {
+    "prefix": "efn",
+    "body": [
+      "**Cabeza y cuello:** Normocéfalo, apertura ocular espontánea. Mucosa oral hidratada, sin lesiones, dentadura completa.",
+      "",
+      "**Tórax:** Tórax simétrico, murmullo pulmonar SRA, sin lesiones en piel visibles.",
+      "",
+      "**Abdomen:** Abdomen blando, depresible, indoloro, sin signos de irritación peritoneal ni lesiones en piel.",
+      "",
+      "**Zona dorsal y sacra:** Zona dorsal sana, sin lesiones; se aplica crema para prevención de LPP según protocolo. No se observan lesiones en zona sacra ni interglútea.",
+      "",
+      "**Genitales y periné:** Genitales externos sanos, sin lesiones visibles.",
+      "",
+      "**Eliminación y dispositivos:** En caso de catéter urinario, este se mantiene permeable con salida de orina clara. Deposiciones normales según habitualidad del paciente.",
+      "",
+      "**Extremidades superiores:** Movilidad conservada, acceso venoso periférico permeable sin signos de flebitis.",
+      "",
+      "**Extremidades inferiores:** EEII con movilidad conservada, sin edema, piel íntegra, sin dolor a la palpación de pantorrillas, pulsos periféricos simétricos."
+    ],
+    "description": "Examen físico normal segmentado (cabeza, tórax, abdomen, dorsal, genitales, extremidades)"
+  },
+
+  "PLAN - Pendientes y plan de cuidados": {
+    "prefix": "pen",
+    "body": [
+      "**Pendientes / Plan de cuidados:**",
+      "- Control de signos vitales y parámetros hemodinámicos según protocolo de UPC.",
+      "- Mantener monitoreo de dolor y ajuste de analgesia según escala y respuesta.",
+      "- Supervisar tolerancia a régimen/NPT/SNE y registrar náuseas, vómitos o cambios digestivos.",
+      "- Vigilar diuresis horaria y características de la orina, informar variaciones relevantes.",
+      "- Control de resultados de laboratorio/cultivos y comunicar hallazgos críticos al médico tratante.",
+      "- Mantener cuidados de piel, cambios de posición y prevención de LPP.",
+      "- Reforzar educación a paciente y familia según condición y plan terapéutico."
+    ],
+    "description": "Lista base de pendientes y plan de cuidados estándar"
+  }
+}

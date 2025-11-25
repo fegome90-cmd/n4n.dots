@@ -128,6 +128,52 @@ Esta carpeta contiene documentación técnica y herramientas para el desarrollo 
 
 ---
 
+### ⚡ Plantillas de Configuración Listas para Usar
+
+#### [`config-templates/`](./config-templates/) 📦 LISTO PARA COPIAR
+**Archivos de configuración completos basados en PDF 3000**
+
+- ✅ **`markdown.json`**: 11 snippets completos (evo, nbo, hst, rst, ist, mst, elm, dst, ost, efn, pen)
+- ✅ **`telescope_systems.lua`**: Módulo Telescope con menús por sistema
+- ✅ **`n4n-keymaps.lua`**: Keymaps para todos los menús (`<leader>hh`, `<leader>nn`, etc.)
+- ✅ **`IMPLEMENTATION-GUIDE.md`**: Guía paso a paso de instalación completa (5 pasos)
+- ✅ **`README.md`**: Vista previa de snippets y configuración
+
+**Instalación rápida**:
+```bash
+# 1. Copiar snippets
+cp dev-docs/config-templates/markdown.json ~/n4n-dev/config/nvim/snippets/
+
+# 2. Copiar módulo Telescope
+mkdir -p ~/n4n-dev/config/nvim/lua/n4n
+cp dev-docs/config-templates/telescope_systems.lua ~/n4n-dev/config/nvim/lua/n4n/
+
+# 3. Agregar keymaps (ver guía)
+cat dev-docs/config-templates/IMPLEMENTATION-GUIDE.md
+```
+
+**Qué incluye**:
+- Estructura completa de evolución (evo)
+- 8 snippets de normalidad por sistema (nbo, hst, rst, ist, mst, elm, dst, ost)
+- Examen físico segmentado normal (efn)
+- Plan de cuidados estándar (pen)
+- Menús Telescope con keymaps (`<leader>hh`, `<leader>nn`, etc.)
+
+**Flujo de uso** (2-3 min por evolución):
+```vim
+evo<Tab>           # Estructura completa
+nbo<Tab>           # Neuro normal
+hst<Tab>           # Hemo estable
+# O usar menús:
+<leader>hh         # Menú hemo → Enter → hst → Tab
+<leader>xf         # Examen físico → Enter → efn → Tab
+<leader>xp         # Plan → Enter → pen → Tab
+```
+
+**Cuándo usar**: Después de elegir tu alternativa de setup (A, B o C), copia estos archivos para tener el sistema completo funcionando. Lee `IMPLEMENTATION-GUIDE.md` para instalación paso a paso con troubleshooting.
+
+---
+
 ### 🔓 Separación del Repositorio Original
 
 #### [`QUICK-START-SEPARATION.md`](./QUICK-START-SEPARATION.md) ⭐ EMPIEZA AQUÍ
@@ -267,12 +313,18 @@ dev-docs/
 ├── setup-push-safety.ps1              # Script seguridad Windows
 ├── workflows/                         # Flujos de trabajo clínicos
 │   └── upc-daily-workflow.md          # Flujo diario UPC
-└── planning/                          # Planificación y desarrollo
-    ├── README.md                      # Índice de planificación
-    ├── alternatives-existing-neovim.md # Alternativas si ya tienes Neovim
-    ├── telescope-architecture.md      # Arquitectura Telescope + snippets normalidad
-    ├── mac-implementation-tasklist.md # Tasklist atómico (41 tareas)
-    └── mac-dev-environment.md         # Plan completo (3 fases)
+├── planning/                          # Planificación y desarrollo
+│   ├── README.md                      # Índice de planificación
+│   ├── alternatives-existing-neovim.md # Alternativas si ya tienes Neovim
+│   ├── telescope-architecture.md      # Arquitectura Telescope + snippets normalidad
+│   ├── mac-implementation-tasklist.md # Tasklist atómico (41 tareas)
+│   └── mac-dev-environment.md         # Plan completo (3 fases)
+└── config-templates/                  # Plantillas de configuración
+    ├── README.md                      # Índice de plantillas
+    ├── IMPLEMENTATION-GUIDE.md        # Guía de instalación paso a paso
+    ├── markdown.json                  # 11 snippets completos (PDF 3000)
+    ├── telescope_systems.lua          # Módulo Telescope con menús
+    └── n4n-keymaps.lua                # Keymaps para menús
 ```
 
 ---
@@ -545,6 +597,12 @@ Si encuentras errores o quieres mejorar la documentación:
   - Keymaps por sistema: `<leader>hh`, `<leader>nn`, `<leader>rr`, etc.
   - Roadmap de expansión en 5 fases
   - Comparación con diseño original (evo3000)
+- ✅ **PLANTILLAS DE CONFIGURACIÓN**: config-templates/ listos para copiar
+  - `markdown.json`: 11 snippets completos basados en PDF 3000
+  - `telescope_systems.lua`: Módulo completo con menús por sistema
+  - `n4n-keymaps.lua`: Keymaps para todos los menús
+  - `IMPLEMENTATION-GUIDE.md`: Guía paso a paso con troubleshooting
+  - Incluye evo (estructura), 8 normalidad, efn (examen físico), pen (plan)
 - ✅ Agregado análisis de alternativas para usuarios con Neovim existente
 - ✅ Documentadas 3 alternativas: agregar a config actual, NVIM_APPNAME, o desde cero
 - ✅ Actualizado README con flujo de decisión para usuarios con GentlemanNvim
